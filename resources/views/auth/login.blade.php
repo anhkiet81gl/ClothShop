@@ -42,6 +42,12 @@
     <div class="login-box-body">
         <p class="login-box-msg">Đăng nhập bằng tài khoản admin</p>
 
+
+
+
+
+
+        
         <form method="post" action="{{ url('/login') }}">
             @csrf
 
@@ -80,6 +86,13 @@
                 <!-- /.col -->
             </div>
         </form>
+
+
+
+
+
+
+
 
         <a href="{{ url('/password/reset') }}">Quên mật khẩu</a><br>
         <a href="{{ url('/register') }}" class="text-center">Tạo tài khoản</a>
