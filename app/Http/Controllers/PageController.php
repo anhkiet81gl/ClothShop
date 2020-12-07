@@ -142,7 +142,7 @@ class PageController extends Controller
     public function postCheckout(Request $req)
     {
 
-        // dd($req);
+        dd($req);
 
         $cart = Session::get('cart');
 
@@ -181,7 +181,9 @@ class PageController extends Controller
             $bill_detail->save();
         }
         Session::forget('cart');
-        return redirect()->route('trangchu')->with('thongbao', 'Đặt hàng thành công');
+
+
+        return redirect()->route('hoantatdonhang')->with('thongbao', 'Đặt hàng thành công');
     }
 
     public function dashboard(){

@@ -107,7 +107,9 @@ Route::get('/xacnhanthanhtoan', function () {
 
 Route::get('/hoantatdonhang', function () {
     return view('clothshop.finish');
-});
+
+    
+})->name('hoantatdonhang');
 
 Route::get('/thongtin', function () {
     return view('clothshop.about');
