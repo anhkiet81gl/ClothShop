@@ -117,7 +117,13 @@ Route::get('/lienhe', function () {
     return view('clothshop.contact');
 })->name('lienhe');
 
+Route::get('/dangnhap', function () {
+    return view('clothshop.login');
+})->name('dangnhap');
 
+Route::get('/taotaikhoan', function () {
+    return view('clothshop.register');
+})->name('taotaikhoan');
 
 
 
