@@ -15,6 +15,7 @@
         return params;
     };
     
+    
     var _getVisibleColumns = function () {
 
         var visible_columns = [];
