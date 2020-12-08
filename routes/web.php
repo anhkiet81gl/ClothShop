@@ -107,9 +107,7 @@ Route::get('/xacnhanthanhtoan', function () {
 
 Route::get('/hoantatdonhang', function () {
     return view('clothshop.finish');
-
-    
-})->name('hoantatdonhang');
+});
 
 Route::get('/thongtin', function () {
     return view('clothshop.about');
@@ -119,13 +117,7 @@ Route::get('/lienhe', function () {
     return view('clothshop.contact');
 })->name('lienhe');
 
-Route::get('/dangnhap', function () {
-    return view('clothshop.login');
-})->name('dangnhap');
 
-Route::get('/taotaikhoan', function () {
-    return view('clothshop.register');
-})->name('taotaikhoan');
 
 
 

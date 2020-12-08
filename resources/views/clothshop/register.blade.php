@@ -4,11 +4,11 @@
 	<div class="container">
 		<div class="page-breadcrumb">
 			<ol class="breadcrumb">
-				<li><a title="Home" href="{{route('trangchu')}}">Trang chủ</a></li>
+				<li><a title="Home" href="index.html">Trang chủ</a></li>
 				<li class="active">Tạo tài khoản</li>
 			</ol>
 			<div class="return-home-link pull-right">
-				<a title="Return to home page" href="index.html">Trở về trang chủ</a>
+				<a title="Return to home page" href="index.html">Về trang chủ</a>
 			</div>
 		</div>
 		<div class="page-header bottom-shadow">
