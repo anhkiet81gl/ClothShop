@@ -28,6 +28,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+
+        if(env('REDIRECT_HTTPS')) {
+            $this->app['request']->server->set('HTTPS', true);
+        }
+
         view()->composer('layouts.clothshop.header',function($view){
             $loai = Categories::all();
             $view->with('loai',$loai);
