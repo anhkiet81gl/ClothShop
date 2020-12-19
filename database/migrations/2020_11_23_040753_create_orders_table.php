@@ -20,6 +20,7 @@ class CreateOrdersTable extends Migration
             $table->integer('delivery_id');
             $table->date('date_order');
             $table->float('total');
+            $table->string('payment');
             $table->text('note');
             $table->timestamps();
             $table->softDeletes();
