@@ -40,6 +40,7 @@
 				</div> -->
 
 				<div class="col-md-12 no-padding">
+<<<<<<< Updated upstream
 					<form>
 						<div class="col-md-4 col-sm-4 no-padding">
 							<div class="product-search-option">
@@ -109,6 +110,9 @@
 							</div>
 						</div>
 					</form>
+=======
+					
+>>>>>>> Stashed changes
 				</div>
 			</div>
 			<!-- <div class="pillbox">
@@ -123,10 +127,20 @@
 	<!-- Product Filter /- -->
 
 	<!-- Feature Product -->
-	<div id="featured-products" class="featured-products bottom-shadow">
+	<div id="featured-products" class="featured-products col-md-12">
 		<!-- container -->
-		<div class="container">
-			<div class=" product-box-main">
+		<div class="col-md-2 ">
+			<div >
+				<ul style="list-style-type:none">
+				@foreach($categories as $categories)
+				<li class="text-center text-dark"><h3><a style="color: gray" href="{{route('productCategories',$categories->id)}}">{{$categories->category_name}}</a></h3></li>
+
+				@endforeach
+				</ul>
+			</div>
+		</div>
+		<div class=" col-md-10">
+			<div class=" product-box-main ">
 				@foreach ($products as $products)
 				<div class="col-md-3 col-sm-6 col-xs-6 main-product">
 					<div class="category-box product-box">
@@ -136,7 +150,6 @@
 							<div class="product-box-inner">
 								<ul>
 									<li><a title="Eye Icon" href="images/featured/featured-1.jpg"><i class="fa fa-eye"></i></a></li>
-									<li><a title="Heart Icon" href="#"><i class="fa fa-heart"></i></a></li>
 								</ul>
 								<a title="Add to cart" href="" class="btn">Thêm vào giỏ</a>
 							</div>
