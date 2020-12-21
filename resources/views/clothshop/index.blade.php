@@ -13,27 +13,13 @@
 
 				<div class="item active">
 					<img src="https://vnso.vn/wp-content/uploads/2019/09/quang-cao-tang-100-web-banner.jpg" alt="slide-1">
-					<div class="container">
-						<div class="slider-box">
-							<h3>Beauty &amp; Brain</h3>
-							<h2>Fresh Fall Styles</h2>
-							<p>Nam ac egestas est. Mauris et pulvinar Alisesus, at tincidunt lorem maecenas tristique sit amet odio sit amet. </p>
-							<button class="btn">Button</button>
-						</div>
-					</div>
+					
 				</div>
 
 				@foreach ($banner as $banner)
 				<div class="item">
 				<img src="{{$banner->link}}" alt="slide-{{$banner->id}}">
-					<div class="container">
-						<div class="slider-box">
-							<h3>Beauty &amp; Brain</h3>
-							<h2>Fresh Fall Styles</h2>
-							<p>Nam ac egestas est. Mauris et pulvinar Alisesus, at tincidunt lorem maecenas tristique sit amet odio sit amet. </p>
-							<button class="btn">Button</button>
-						</div>
-					</div>
+					
 				</div>
 				@endforeach
 
@@ -118,7 +104,7 @@
 							</div>
 						</div>
 					</div>
-					<a href="#" class="product-title">{{$products->product_name }}</a>
+					<a href="chi-tiet-sanpham/{{ $products->id }}" class="product-title">{{$products->product_name }}</a>
 					<ul class="star">
 						<li>
 						<i class="fa fa-star"></i>

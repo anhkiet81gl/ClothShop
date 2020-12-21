@@ -27,7 +27,7 @@
 				<!-- col-md-3 -->
 				<div class="col-md-3 col-sm-3 col-xs-6">
 					<div class="category-box">
-						<span class="sale">+786</span>
+						{{-- <span class="sale">+786</span> --}}
 						<a title="Mens" href="#">
 							<img src="{{URL::asset('clothshop/images/category/cat-img-1.jpg')}}" alt="cat-img" />
 							<span>Mens</span>

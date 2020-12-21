@@ -66,7 +66,7 @@
 						<h3>Hãy tạo một tài khoản để tìm hiểu thêm</h3>
 						<p>Nhấn vào nút "tạo tài khoản" để tiếp tục </p>
 						<div class="drop-line bottom-shadow"></div>
-						<a title="Continue" href="08_Shipping_Address.html" class="btn btn-next btn-fill btn-warning btn-wd btn-sm">Tạo tài khoản</a>
+						<a title="Continue" href="{{route('register')}}" class="btn btn-next btn-fill btn-warning btn-wd btn-sm">Tạo tài khoản</a>
 					</div>
 				</div>
 				<!-- col-md-6 /- -->

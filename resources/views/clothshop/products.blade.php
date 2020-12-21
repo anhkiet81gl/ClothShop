@@ -4,11 +4,11 @@
 	<div class="container">
 		<div class="page-breadcrumb">
 			<ol class="breadcrumb">
-				<li><a title="Home" href="index.html"></a>Trang chủ</a></li>
-				<li class="active">Sản phẩm</li>
+				{{-- <li><a title="Home" href="index.html"></a>Trang chủ</a></li>
+				<li class="active">Sản phẩm</li> --}}
 			</ol>
 			<div class="return-home-link pull-right">
-				<a title="Return to home page" href="{{route('trangchu')}}">Trở về trang chủ</a>
+				{{-- <a title="Return to home page" href="{{route('trangchu')}}">Trở về trang chủ</a> --}}
 			</div>
 		</div>
 		<div class="page-header ow-bottom-padding categories">
@@ -21,7 +21,7 @@
 	<!-- Product Filter -->
 	<div class="product-filter">
 		<div class="container">
-			<div class="product-filter-box bottom-shadow">
+			<div class=" bottom-shadow">
 				<!-- <div class="col-md-4">
 					<div id="slider-range"></div>
 					<div class="price-input">
@@ -46,68 +46,15 @@
 								<div class="from-group">
 									<select class="form-control minimal">
 										<option value="selected">Danh mục</option>
-										<option value="">Mới nhất</option>
-										<option value="">Áo thun</option>
-										<option value="">Quần short</option>
-										<option value="">Túi đeo</option>
-										<option value="">Nón</option>
-									</select>
-								</div>
-								<div class="from-group">
-									<select class="form-control minimal">
-										<option value="selected">Màu</option>
-										<option value="">Xanh</option>
-										<option value="">Đỏ</option>
-										<option value="">Tím</option>
-										<option value="">Vàng</option>
-										<option value="">Cam</option>
+										@foreach($categories as $categories)
+                                        
+										<option value=""><a title="Unique Features" href="{{route('productCategories',$categories->id)}}">{{$categories->category_name}}</a></option>
+                                        @endforeach
 									</select>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-4 no-padding">
-							<div class="product-search-option">
-								<div class="from-group">
-									<select class="form-control minimal">
-										<option value="selected">Hãng</option>
-										<option value="">Nike</option>
-										<option value="">Adidas</option>
-										<option value="">Puma</option>
-										<option value="">Under Armour</option>
-									</select>
-								</div>
-								<div class="from-group">
-									<select class="form-control minimal">
-										<option value="selected">Kích thước</option>
-										<option value="">S</option>
-										<option value="">L</option>
-										<option value="">M</option>
-										<option value="">XL</option>
-										<option value="">XX</option>
-									</select>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4 no-padding">
-							<div class="product-search-option">
-								<div class="from-group">
-									<select class="form-control minimal">
-										<option value="selected">Loại</option>
-										<option value="">Dành cho nam</option>
-										<option value="">Dành cho nữ</option>
-									</select>
-								</div>
-								<div class="from-group">
-									<select class="form-control minimal">
-										<option value="selected">Sắp xếp</option>
-										<option value="">Mới nhất</option>
-										<option value="">Hot nhất</option>
-										<option value="">Từ cao đến thấp</option>
-										<option value="">Từ thấp đến cao</option>
-									</select>
-								</div>
-							</div>
-						</div>
+						
 					</form>
 				</div>
 			</div>
