@@ -4,13 +4,13 @@
 	<div class="container">
 		<div class="page-breadcrumb">
 			<ol class="breadcrumb">
-				<li><a title="Home" href="index.html">Home</a></li>
+				{{-- <li><a title="Home" href="index.html">Home</a></li>
 				<li><a title="Clothing" href="#">Clothing</a></li>
 				<li><a title="Women's Clothing" href="#">Women's Clothing</a></li>
-				<li class="active">ALl Categories</li>
+				<li class="active">ALl Categories</li> --}}
 			</ol>
 			<div class="return-home-link pull-right">
-				<a title="Return to home page" href="index.html">return to home page</a>
+				{{-- <a title="Return to home page" href="index.html">return to home page</a> --}}
 			</div>
 		</div>
 	</div><!-- container /- -->
@@ -108,11 +108,7 @@
 				
 				<!-- col-md-5 -->
 				<div class="col-md-5 single-product-sidebar">
-					<ul class="categories-list">
-						<li><a title="Women" href="#">Women</a></li>
-						<li><a title="Wear" href="#">Wear</a></li>
-						<li><a title="Top" href="#">Top</a></li>
-					</ul>
+					
 					<div class="page-header">
 						<h3>Tên sản phẩm {{$products->product_name }}</h3>
 					</div>
@@ -201,7 +197,7 @@
 											</tbody>
 										</table>
 										<ul>
-											<li><a title="But Now" href="#">Thêm vào giỏ hàng</a></li>
+											<li><a title="But Now" href="{{route('addToCart',$products->id)}}">Thêm vào giỏ hàng</a></li>
 											<!-- <li><a title="Favorites" href="#">favorites</a></li> -->
 										</ul>
 									</div>
@@ -211,10 +207,11 @@
 									<div class="shopping-cart-table size-chart">
 										<div class="col-md-5 col-sm-5">
 											<ol>
+												<li>Nam</li>
 												<li><span>1.</span>Ngực</li>
 												<li><span>2.</span>Lưng</li>
 											</ol>
-											<img src="images/single-product/man.png" alt="man" />
+											
 										</div>
 										<div class="col-md-6 col-sm-6">
 											<table>
@@ -256,11 +253,12 @@
 										</div>	
 										<div class="col-md-5 col-sm-5">
 											<ol>
+												<li>Nữ</li>
 												<li><span>1.</span>Ngực</li>
 												<li><span>2.</span>Lưng</li>
 												<li><span>3.</span>Hông</li>
 											</ol>
-											<img src="images/single-product/girls.png" alt="girls" />
+											
 										</div>
 										<div class="col-md-7 col-sm-7">
 											<table>
@@ -315,7 +313,7 @@
 												<h3>Tiêu đề:</h3>
 											</div>
 											<div class="col-md-7 col-sm-7">
-												<input type="text" placeholder="(Maximum 20 words)" />
+												<input type="text"  />
 											</div>
 										</div>
 										<div class="review-box">
@@ -323,7 +321,7 @@
 												<h3>Bình luận:</h3>
 											</div>
 											<div class="col-md-7 col-sm-7">
-												<textarea placeholder="(at least 100 characters.)"></textarea>
+												<textarea ></textarea>
 											</div>
 											
 										</div>
@@ -344,10 +342,10 @@
 										</div>
 										<div class="review-box">
 											<div class="col-md-5 col-sm-5">
-												<h3>Name</h3>
+												<h3>Tên</h3>
 											</div>
 											<div class="col-md-7 col-sm-7">
-												<input type="text" placeholder="(First and last name)" />
+												<input type="text"  />
 											</div>
 										</div>
 									</div>

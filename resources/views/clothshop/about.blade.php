@@ -2,11 +2,11 @@
 	<div class="container">
 		<div class="page-breadcrumb">
 			<ol class="breadcrumb">
-				<li><a title="Home" href="index.html"></a>Trang chủ</a></li>
-				<li class="active">Thông tin</li>
+				{{-- <li><a title="Home" href="index.html"></a>Trang chủ</a></li>
+				<li class="active">Thông tin</li> --}}
 			</ol>
 			<div class="return-home-link pull-right">
-				<a title="Return to home page" href="{{route('trangchu')}}">Trở về trang chủ</a>
+				{{-- <a title="Return to home page" href="{{route('trangchu')}}">Trở về trang chủ</a> --}}
 			</div>
 		</div>
 		{{-- <div class="page-header ow-bottom-padding categories">

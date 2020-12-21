@@ -85,8 +85,7 @@ class PageController extends Controller
     {
         $products = $this->productsRepository->all();
         $categories = $this->categoriesRepository->all();
-
-        return view('clothshop.products', compact('products' ));
+        return view('clothshop.products', compact('products','categories' ));
     }
 
     public function productDetail($id)
