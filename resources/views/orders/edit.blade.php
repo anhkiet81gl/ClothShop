@@ -16,27 +16,31 @@
                         @include('orders.fields')
 
                    {!! Form::close() !!}
-                   <table class="table">
-                       <thead>
-                       <tr>
-                           <th>OrderItemId</th>
-                           <th>OrderID</th>
-                           <th>Product Name</th>
-                       </tr>
-                       </thead>
-                       <tbody>
-                       @foreach($orderItems as $orderItem)
-                           <tr>
-                               <td>{{$orderItem->id}}</td>
-                               <td>{{$order->id}}</td>
-                               <td>{{$orderItem->product->product_name}}</td>
-                               <td><button>Edit</button></td>
-                           </tr>
-                       @endforeach
-                       </tbody>
-                   </table>
+
                </div>
            </div>
+       </div>
+       <div class="panel panel-default">
+           <!-- Default panel contents -->
+           <div class="panel-heading">Order items</div>
+
+           <!-- Table -->
+           <table class="table">
+               <thead>
+               <tr>
+                   <th>Product Name</th>
+
+               </tr>
+               </thead>
+               <tbody>
+               @foreach($orderItems as $orderItem)
+                   <tr>
+                       <td>{{$orderItem->product->product_name}}</td>
+                       <td><button class="btn btn-danger">Xóa</button></td>
+                   </tr>
+               @endforeach
+               </tbody>
+           </table>
        </div>
    </div>
 @endsection

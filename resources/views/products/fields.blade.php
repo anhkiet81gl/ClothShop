@@ -7,7 +7,8 @@
 <!-- Category Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('category_id', 'ID Loại sản phẩm:') !!}
-    {!! Form::text('category_id', null, ['class' => 'form-control']) !!}
+    {!! Form::select('category_id', \App\Models\Products::pluck('product_name','id'), null, ['class' => 'form-control', 'placeholder' => '']) !!}
+{{--    {!! Form::text('category_id', null, ['class' => 'form-control']) !!}--}}
 </div>
 
 <!-- Product Image Field -->

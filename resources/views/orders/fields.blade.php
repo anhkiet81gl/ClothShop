@@ -1,13 +1,15 @@
 <!-- Customer Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('customer_id', 'ID Khách hàng:') !!}
-    {!! Form::text('customer_id', null, ['class' => 'form-control']) !!}
+    {!! Form::select('customer_id', \App\Models\Customer::pluck('name','id'), null, ['class' => 'form-control', 'placeholder' => '', 'disabled' => 'disabled']) !!}
+{{--    {!! Form::text('customer_id', null, ['class' => 'form-control']) !!}--}}
 </div>
 
 <!-- Delivery Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('delivery_id', 'ID Giao hàng:') !!}
-    {!! Form::text('delivery_id', null, ['class' => 'form-control']) !!}
+    {!! Form::select('delivery_id', \App\Models\Delivery::pluck('name','id'), null, ['class' => 'form-control', 'placeholder' => '']) !!}
+{{--    {!! Form::text('delivery_id', null, ['class' => 'form-control']) !!}--}}
 </div>
 
 <!-- Total Field -->
