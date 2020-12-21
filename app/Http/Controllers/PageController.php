@@ -103,10 +103,9 @@ class PageController extends Controller
     public function getProductCategories($id)
     {
         $products = Products::where('category_id',$id)->get();
-
-
+        $categories = $this->categoriesRepository->all();
 //        dd($productsCategories);
-        return view('clothshop.products', compact('products' ));
+        return view('clothshop.products', compact('products','categories' ));
     }
 
     public function getAddToCart(Request $req, $id)

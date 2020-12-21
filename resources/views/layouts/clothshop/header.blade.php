@@ -4,14 +4,16 @@
         <!-- container -->
         <div class="container">
             <ul class="top-social col-md-6 col-sm-4">
-                <li><a title="Facebook" ></a></li>
+                <li><img src="{{URL::asset('/img/logo/logocs.svg')}}" width="40px" height="40px" style="opacity: 0.1"></li>
                 
             </ul>
             <div class="col-md-6 ow-right-padding col-sm-8">
-                
                 <ul class="top-menu">
-                    <li><a title="Login" href="{{route('login')}}">Đăng nhập</a></li>
-                    <li><a title="Register" href="{{route('register')}}">Đăng kí</a></li>
+
+                </ul>
+                <ul class="top-menu">
+                    <li><a title="Login" href="07_login_register.html">Đăng nhập</a></li>
+                    <li><a title="Register" href="05_register.html">Đăng kí</a></li>
                 </ul>
             </div>
         </div><!-- container /- -->
@@ -31,7 +33,8 @@
             </div>
             <div class="col-md-6 logo-block col-sm-6 col-xs-6">
                 <a title="Logo" href="{{route('trangchu')}}">
-                    <img src="">
+                    
+                    <img src="{{URL::asset('/img/logo/logocs.svg')}}" width="50px" height="50px" style="opacity: 0.5">
                     Cloth Shop
                 </a>
             </div>
@@ -122,31 +125,93 @@
                 </div>
                 <div class="navbar-collapse collapse" id="navbar">
                     <ul class="nav navbar-nav">
-                        <li class=""><a title="Home" href="{{route('trangchu')}}">Trang chủ</a></li>
+                        <li class="active"><a title="Home" href="{{route('trangchu')}}">Trang chủ</a></li>
 
                         <li><a title="About Us" href="{{route('sanpham')}}">Cửa hàng</a></li>
-                         {{-- <li class="dropdown ">
+                        <li class="dropdown mega-dropdown">
                             <a title="categories" href="02_categories.html" class="dropdown-toggle" data-toggle="dropdown">Danh mục
-                               
+                                <!-- <div role="tooltip" class="tooltip top">
+                                    <div class="tooltip-arrow"></div>
+                                    <div class="tooltip-inner">New</div>
+                                </div> -->
                             </a>
-                            <ul class="dropdown-menu  row">
-                                
+                            <ul class="dropdown-menu mega-dropdown-menu row">
+                                <li class="col-md-3 col-sm-6">
+                                    <ul>
+                                        <li class="dropdown-header">Mới nhất</li>
+                                        <li id="mega-dropdown-slider" class="carousel slide mega-dropdown-slider" data-ride="carousel">
+                                            <ul class="carousel-inner">
+                                                <li class="item active">
+                                                    <a title="Product 1" href="#"><img src="https://s3.amazonaws.com/nikeinc/assets/84925/Sp19_BB_Nike_Adapt_20181218_NIKE0538_Detail5_rectangle_1600.jpg?1547068102" class="img-responsive" alt="product 1"></a>
+                                                    <h4><small>tên và slide 1</small></h4>
+                                                    <button class="btn btn-primary" type="button">49,99 VND</button> <button  class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Yêu thích</button>
+                                                </li><!-- End Item -->
+                                                <li class="item">
+                                                    <a title="Product 2" href="#"><img src="https://s3.amazonaws.com/nikeinc/assets/84925/Sp19_BB_Nike_Adapt_20181218_NIKE0538_Detail5_rectangle_1600.jpg?1547068102" class="img-responsive" alt="product 2"></a>
+                                                    <h4><small>tên và slide 2</small></h4>
+                                                    <button class="btn btn-primary" type="button">9,99 VND</button> <button  class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Yêu thích</button>
+                                                </li><!-- End Item -->
+                                                <li class="item">
+                                                    <a title="Product 3" href="#"><img src="https://s3.amazonaws.com/nikeinc/assets/84925/Sp19_BB_Nike_Adapt_20181218_NIKE0538_Detail5_rectangle_1600.jpg?1547068102" class="img-responsive" alt="product 3"></a>
+                                                    <h4><small>tên và slide 3</small></h4>
+                                                    <button class="btn btn-primary" type="button">49,99 VND</button> <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Yêu thích</button>
+                                                </li><!-- End Item -->
+                                            </ul><!-- End Carousel Inner -->
+                                        </li><!-- /.carousel -->
+                                        <li class="divider"></li>
+                                        <!-- <li><a title="View all Collection" href="#">View all Collection <span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li> -->
+                                    </ul>
+                                </li>
                                 <li class="col-md-3 col-sm-6">
                                     <ul>
 
 
                                         <li class="dropdown-header">Áo thun</li>
-                                      
+                                       {{-- @dd($loai) --}}
                                         @foreach($loai as $loai)
                                         <li><a title="Unique Features" href="{{route('productCategories',$loai->id)}}">{{$loai->category_name}}</a></li>
 
                                         @endforeach
-                                       
+                                        {{-- <li class="dropdown-header">Nón</li>
+                                        <li><a title="Good Typography" href="#">Good Typography</a></li> --}}
                                     </ul>
                                 </li>
-                                
+                                {{-- <li class="col-md-3 col-sm-6">
+                                    <ul>
+                                        <li class="dropdown-header">Quần short</li>
+                                        <li><a title="Easy to customize" href="#">Easy to customize</a></li>
+                                        <li><a title="Glyphicons" href="#">Glyphicons</a></li>
+                                        <li><a title="Pull Right Elements" href="#">Pull Right Elements</a></li>
+                                        <li class="divider"></li>
+                                        <li class="dropdown-header">Túi đeo</li>
+                                        <li><a title="Coloured Headers" href="#">Coloured Headers</a></li>
+                                        <li><a title="Primary Buttons & Default" href="#">Primary Buttons & Default</a></li>
+                                        <li><a title="Calls to action" href="#">Calls to action</a></li>
+                                    </ul>
+                                </li>
+                                <li class="col-md-3 col-sm-6">
+                                    <ul>
+                                        <li class="dropdown-header">Dành cho nam</li>
+                                        <li><a title="Default Navbar" href="#">Default Navbar</a></li>
+                                        <li><a title="Lovely Fonts" href="#">Lovely Fonts</a></li>
+                                        <li><a title="Responsive Dropdown" href="#">Responsive Dropdown </a></li>
+                                        <li class="divider"></li>
+                                        <li class="dropdown-header">Dành cho nữ</li>
+                                        <li><a title="Coloured Headers" href="#">Coloured Headers</a></li>
+                                        <li><a title="Primary Buttons & Default" href="#">Primary Buttons & Default</a></li>
+                                        <li><a title="Calls to action" href="#">Calls to action</a></li>
+                                        <li class="dropdown-header">Newsletter</li>
+                                        <form class="form" role="form">
+                                          <div class="form-group">
+                                            <label class="sr-only" for="email">Email address</label>
+                                            <input type="email" class="form-control" id="email" placeholder="Enter email" />
+                                          </div>
+                                          <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                        </form>
+                                    </ul>
+                                </li> --}}
                             </ul>
-                        </li>  --}}
+                        </li>
                         <!-- <li><a title="Look Book" href="look-book.html">Look Book</a></li>								 -->
                         {{-- <li><a title="Blog" href="12_blog.html">Blog</a></li> --}}
                     <li><a title="About Us" href="{{route('thongtin')}}">Thông tin</a></li>
