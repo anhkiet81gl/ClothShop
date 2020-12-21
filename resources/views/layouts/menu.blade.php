@@ -1,3 +1,4 @@
+@if(Auth::user()->role_id >= 0)
 <li class="active">
     <a href="{!! route('dashboard') !!}"><i class="fa fa-user"></i><span>Dashboard</span></a>
 </li>
@@ -33,5 +34,13 @@
 <li class="{{ Request::is('banners*') ? 'active' : '' }}">
     <a href="{{ route('banners.index') }}"><i class="fa fa-edit"></i><span>Banners</span></a>
 </li>
+
+<li class="{{ Request::is('roles*') ? 'active' : '' }}">
+    <a href="{{ route('roles.index') }}"><i class="fa fa-edit"></i><span>Roles</span></a>
+</li>
+@else
+
+
+@endif
 
 

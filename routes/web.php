@@ -147,3 +147,6 @@ Route::get('/dashboard', 'PageController@dashboard')->name('dashboard');
 
 
 
+
+
+Route::resource('roles', 'RolesController');
