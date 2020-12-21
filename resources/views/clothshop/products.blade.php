@@ -40,26 +40,7 @@
 				</div> -->
 
 				<div class="col-md-12 no-padding">
-<<<<<<< Updated upstream
-					<form>
-						<div class="col-md-4 col-sm-4 no-padding">
-							<div class="product-search-option">
-								<div class="from-group">
-									<select class="form-control minimal">
-										<option value="selected">Danh mục</option>
-										@foreach($categories as $categories)
-                                        
-										<option value=""><a title="Unique Features" href="{{route('productCategories',$categories->id)}}">{{$categories->category_name}}</a></option>
-                                        @endforeach
-									</select>
-								</div>
-							</div>
-						</div>
-						
-					</form>
-=======
-					
->>>>>>> Stashed changes
+
 				</div>
 			</div>
 			<!-- <div class="pillbox">
@@ -79,8 +60,9 @@
 		<div class="col-md-2 ">
 			<div >
 				<ul style="list-style-type:none">
-				@foreach($categories as $categories)
-				<li class="text-center text-dark"><h3><a style="color: gray" href="{{route('productCategories',$categories->id)}}">{{$categories->category_name}}</a></h3></li>
+
+				@foreach($categories as $categoriesp)
+				<li class="text-center text-dark"><h3><a style="color: gray" href="{{route('productCategories',$categoriesp->id)}}">{{$categoriesp->category_name}}</a></h3></li>
 
 				@endforeach
 				</ul>
@@ -102,7 +84,7 @@
 							</div>
 						</div>
 					</div>
-					<a title="Fashionable Pink Top" href="chi-tiet-sanpham/{{ $products->id }}" class="product-title">{{ $products->product_name }}</a>
+					<a title="Fashionable Pink Top" href="{{route('productDetail',$products->id)}}" class="product-title">{{ $products->product_name }}</a>
 					<ul class="star">
 						<li>
 						<i class="fa fa-star"></i>

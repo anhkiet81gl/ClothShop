@@ -145,8 +145,4 @@ Route::get('/count', 'PageController@count')->name('count');
 
 Route::get('/dashboard', 'PageController@dashboard')->name('dashboard');
 
-
-
-
-
 Route::resource('roles', 'RolesController');
