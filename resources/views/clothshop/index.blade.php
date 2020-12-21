@@ -12,8 +12,8 @@
 			<div class="carousel-inner" role="listbox">
 
 				<div class="item active">
-					<img src="" alt="slide-1">
-					
+					<img src="https://clothshop.studio/banner/Untitled-1.png" alt="slide-1">
+
 				</div>
 
 				@foreach ($banner as $banner)
@@ -32,7 +32,7 @@
 
 
 
-				
+
 			</div>
 			<!-- Controls -->
 			<a title="Previous" class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
