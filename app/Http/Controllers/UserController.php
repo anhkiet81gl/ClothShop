@@ -6,6 +6,7 @@ use App\Http\Requests\CreateUserRequest;
 use App\Http\Requests\UpdateUserRequest;
 use App\Repositories\UserRepository;
 use App\Http\Controllers\AppBaseController;
+use App\User;
 use Illuminate\Http\Request;
 use Flash;
 use Response;
@@ -113,7 +114,7 @@ class UserController extends AppBaseController
      */
     public function update($id, UpdateUserRequest $request)
     {
-        $user = $this->userRepository->find($id);
+        $user =User::find($id);
 
         if (empty($user)) {
             Flash::error('User not found');
@@ -126,7 +127,8 @@ class UserController extends AppBaseController
         } else {
             unset($input['password']);
         }
-        $user = $this->userRepository->update($input, $id);
+
+        $user = $user->update($input);
 
         Flash::success('User updated successfully.');
 

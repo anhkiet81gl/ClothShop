@@ -32,3 +32,5 @@ Route::resource('banners', 'BannerAPIController');
 Route::resource('customers', 'CustomerAPIController');
 
 Route::resource('orders', 'OrderAPIController');
+
+Route::resource('roles', 'RolesAPIController');

@@ -10,6 +10,12 @@
     {!! Form::email('email', null, ['class' => 'form-control']) !!}
 </div>
 
+<div class="form-group col-sm-6">
+    {!! Form::label('role_id', 'Phân quyền:') !!}
+    {!! Form::select('role_id', \App\Models\Roles::pluck('role','id'), null, ['class' => 'form-control', 'placeholder' => '']) !!}
+    {{--    {!! Form::text('category_id', null, ['class' => 'form-control']) !!}--}}
+</div>
+
 <!-- Password Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('password', 'Mật khẩu') !!}
