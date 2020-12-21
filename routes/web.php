@@ -81,9 +81,7 @@ Route::resource('orders', 'OrderController');
 //    return view('clothshop.login');
 //});
 
-//Route::get('/taotaikhoan', function () {
-//    return view('clothshop.register');
-//});
+
 
 // Route::get('/chitietsp', function () {
 //     return view('clothshop.singleproduct');
@@ -117,9 +115,13 @@ Route::get('/lienhe', function () {
     return view('clothshop.contact');
 })->name('lienhe');
 
+Route::get('/dangnhap', function () {
+    return view('auth.login');
+});
 
-
-
+Route::get('/taotaikhoan', function () {
+    return view('auth.register');
+});
 
 
 
