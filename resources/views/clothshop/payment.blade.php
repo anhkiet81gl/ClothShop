@@ -4,11 +4,11 @@
 	<div class="container">
 		<div class="page-breadcrumb">
 			<ol class="breadcrumb">
-				<li><a title="Home" href="index.html">Tran chủ</a></li>
-				<li class="active">Thanh toán</li>
+				{{-- <li><a title="Home" href="index.html">Tran chủ</a></li>
+				<li class="active">Thanh toán</li> --}}
 			</ol>
 			<div class="return-home-link pull-right">
-				<a title="Return Home Page" href="index.html">Trở lại trang chủ</a>
+				{{-- <a title="Return Home Page" href="index.html">Trở lại trang chủ</a> --}}
 			</div>
 		</div>
 		<div class="page-header bottom-shadow">

@@ -28,7 +28,7 @@
 </li>
 
 <li class="{{ Request::is('deliveries*') ? 'active' : '' }}">
-    <a href="{{ route('deliveries.index') }}"><i class="fa fa-edit"></i><span>Deliveries</span></a>
+    <a href="{{ route('deliveries.index') }}"><i class="fa fa-edit"></i><span>Giao hàng</span></a>
 </li>
 
 <li class="{{ Request::is('banners*') ? 'active' : '' }}">
@@ -36,7 +36,7 @@
 </li>
 
 <li class="{{ Request::is('roles*') ? 'active' : '' }}">
-    <a href="{{ route('roles.index') }}"><i class="fa fa-edit"></i><span>Roles</span></a>
+    <a href="{{ route('roles.index') }}"><i class="fa fa-edit"></i><span>Phân quyền</span></a>
 </li>
 @else
 

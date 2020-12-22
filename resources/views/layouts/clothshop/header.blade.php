@@ -13,12 +13,74 @@
                 @if(Auth::check())
                     @if(Auth::user()->role_id > 0)
                         <ul class="top-menu">
-                            <li><a title="Login" href="{{route('users.index')}}">ADMIN</a></li>
+                            <li class="dropdown">
+                                <ul>
+                                <a  href="{{route('users.index')}}" class="dropdown-toggle" data-toggle="dropdown">ADMIN</a>
+                                </ul>
+                            </li>
                             <li><a title="" href="">{{Auth::user()->name}}</a></li>
                         </ul>
+                        <ul class="top-menu ">
+                            <li class="">
+                                <!-- Menu Toggle Button -->
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <span class="">{{ Auth::user()->name }}</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <!-- The user image in the menu -->
+                                    
+                                    <!-- Menu Footer-->
+                                    <li class="user-footer">
+                                        
+                                        <div class="">
+                                            <a href="#" class="btn  btn-flat">Thông tin</a>
+                                        </div>
+                                        <div class="">
+                                            <a href="{{ url('/logout') }}" class="btn  btn-flat"
+                                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                                Đăng xuất
+                                            </a>
+                                            <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                                @csrf
+                                            </form>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     @else
-                        <ul class="top-menu">
+                        {{-- <ul class="top-menu">
                             <li><a title="Register" href="">{{Auth::user()->name}}</a></li>
+                        </ul> --}}
+                        <ul class="top-menu ">
+                            <li class="">
+                                <!-- Menu Toggle Button -->
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <span class="">{{ Auth::user()->name }}</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <!-- The user image in the menu -->
+                                    
+                                    <!-- Menu Footer-->
+                                    <li class="user-footer">
+                                        <div class="">
+                                            <a href="" class="btn  btn-flat">Trang quản lý</a>
+                                        </div>
+                                        <div class="">
+                                            <a href="#" class="btn  btn-flat">Thông tin</a>
+                                        </div>
+                                        <div class="">
+                                            <a href="{{ url('/logout') }}" class="btn  btn-flat"
+                                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                                Sign out
+                                            </a>
+                                            <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                                @csrf
+                                            </form>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
                     @endif
                 @else
@@ -109,7 +171,7 @@
                 </div>
                 <div class="navbar-collapse collapse" id="navbar">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a title="Home" href="{{route('trangchu')}}">Trang chủ</a></li>
+                        <li ><a title="Home" href="{{route('trangchu')}}">Trang chủ</a></li>
 
                         <li><a title="About Us" href="{{route('sanpham')}}">Cửa hàng</a></li>
                     <li><a title="About Us" href="{{route('thongtin')}}">Thông tin</a></li>

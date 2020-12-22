@@ -59,10 +59,10 @@
 		<!-- container -->
 		<div class="col-md-2 ">
 			<div >
-				<ul style="list-style-type:none">
-
+				<ul style="list-style-type:none" class="list-group">
+				<li class="text-center list-group-item "><h3>Hãng</h3></li>
 				@foreach($categories as $categoriesp)
-				<li class="text-center text-dark"><h3><a style="color: gray" href="{{route('productCategories',$categoriesp->id)}}">{{$categoriesp->category_name}}</a></h3></li>
+				<li class="text-center text-dark "><a class="list-group-item-action list-group-item" style="color: gray" href="{{route('productCategories',$categoriesp->id)}}">{{$categoriesp->category_name}}</a></li>
 
 				@endforeach
 				</ul>
@@ -78,9 +78,9 @@
 							<img src="{{$products->product_image }}" alt="featured-img"/>
 							<div class="product-box-inner">
 								<ul>
-									<li><a title="Eye Icon" href="images/featured/featured-1.jpg"><i class="fa fa-eye"></i></a></li>
+									<li><a title="Eye Icon" href="{{$products->product_image }}"><i class="fa fa-eye"></i></a></li>
 								</ul>
-								<a title="Add to cart" href="" class="btn">Thêm vào giỏ</a>
+								<a title="Add to cart" href="{{route('addToCart',$products->id)}}" class="btn">Thêm vào giỏ</a>
 							</div>
 						</div>
 					</div>

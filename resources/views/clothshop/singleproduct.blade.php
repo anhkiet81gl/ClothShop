@@ -201,7 +201,7 @@
 											<!-- <li><a title="Favorites" href="#">favorites</a></li> -->
 										</ul>
 									</div>
-									<a title="Add Banner" href="#"><img src="images/single-product/add-banner.png" alt="add-banner" /></a>
+									
 								</div>
 								<div id="size-chart" class="tab-pane" role="tabpanel">
 									<div class="shopping-cart-table size-chart">
