@@ -15,7 +15,7 @@
 		</div>
 	</div><!-- container /- -->
 	<!-- Page Breadcrumb /- -->
-	
+
 	<!-- Single Product -->
 	<div id="single-product" class="single-product">
 		<!-- Container -->
@@ -34,7 +34,7 @@
 								</li>
 								<li>
 									<img src="images/single-product/product-thumb-3.jpg" alt="product-thumb">
-								</li>								
+								</li>
 							</ul>
 						</div> --}}
 						<div id="about-slider" class="flexslider col-md-9 col-sm-9 col-xs-9 product-slider">
@@ -78,7 +78,7 @@
 						<div class="col-md-6 col-sm-6 col-xs-6 main-product">
 							<!-- <div class="category-box product-box">
 								<span class="sale">sales</span>
-								<div class="inner-product">									
+								<div class="inner-product">
 									<img src="images/featured/featured-3.jpg" alt="featured-img"/>
 									<div class="product-box-inner">
 										<ul>
@@ -105,10 +105,10 @@
 					</div>
 				</div>
 				<!-- col-md-7 /- -->
-				
+
 				<!-- col-md-5 -->
 				<div class="col-md-5 single-product-sidebar">
-					
+
 					<div class="page-header">
 						<h3>Tên sản phẩm {{$products->product_name }}</h3>
 					</div>
@@ -165,8 +165,8 @@
 							<p>Để logo hãng</p>
 						</li>
 					</ul> --}}
-					
-					<aside class="widget widget_recent_post">						
+
+					<aside class="widget widget_recent_post">
 						<div role="tabpanel">
 							<!-- Nav tabs -->
 							<ul role="tablist" class="nav nav-tabs bottom-shadow">
@@ -184,15 +184,6 @@
 													<th>Giá sản phẩm</th>
 													<td><span class="amount">{{$products->price }}</span></td>
 												</tr>
-												<tr class="cart-subtotal">
-													<th>Số lượng sản phẩm</th>
-													<td>
-														<select class="minimal">
-															<option>02</option>
-															<option>03</option>
-														</select>
-													</td>
-												</tr>
 
 											</tbody>
 										</table>
@@ -201,7 +192,7 @@
 											<!-- <li><a title="Favorites" href="#">favorites</a></li> -->
 										</ul>
 									</div>
-									
+
 								</div>
 								<div id="size-chart" class="tab-pane" role="tabpanel">
 									<div class="shopping-cart-table size-chart">
@@ -211,7 +202,7 @@
 												<li><span>1.</span>Ngực</li>
 												<li><span>2.</span>Lưng</li>
 											</ol>
-											
+
 										</div>
 										<div class="col-md-6 col-sm-6">
 											<table>
@@ -250,7 +241,7 @@
 													</tr>
 												</tbody>
 											</table>
-										</div>	
+										</div>
 										<div class="col-md-5 col-sm-5">
 											<ol>
 												<li>Nữ</li>
@@ -258,7 +249,7 @@
 												<li><span>2.</span>Lưng</li>
 												<li><span>3.</span>Hông</li>
 											</ol>
-											
+
 										</div>
 										<div class="col-md-7 col-sm-7">
 											<table>
@@ -303,7 +294,7 @@
 													</tr>
 												</tbody>
 											</table>
-										</div>	
+										</div>
 									</div>
 								</div>
 								<div id="reviews" class="tab-pane" role="tabpanel">
@@ -323,7 +314,7 @@
 											<div class="col-md-7 col-sm-7">
 												<textarea ></textarea>
 											</div>
-											
+
 										</div>
 										<div class="review-box">
 											<div class="col-md-5 col-sm-5">
@@ -336,7 +327,7 @@
 													<i class="fa fa-star"></i>
 													<i class="fa fa-star"></i>
 													<i class="fa fa-star"></i>
-													
+
 												</p>
 											</div>
 										</div>
@@ -359,5 +350,5 @@
 		</div><!-- Container /- -->
 	</div>
 	<!-- Single Product /- -->
-	
+
 </x-master>

@@ -180,7 +180,7 @@ class PageController extends Controller
             $bill_detail->save();
         }
         Session::forget('cart');
-        return redirect()->route('trangchu')->with('thongbao', 'Đặt hàng thành công');
+        return redirect()->route('finish');
     }
 
     public function dashboard(){

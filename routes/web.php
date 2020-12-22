@@ -40,56 +40,19 @@ Route::resource('users', 'UserController')->middleware('auth');
 // Route controller shop*
 
 
-Route::resource('categories', 'CategoriesController');
+Route::resource('categories', 'CategoriesController')->middleware('auth');
 
-Route::resource('products', 'ProductsController');
+Route::resource('products', 'ProductsController')->middleware('auth');
 
-Route::resource('orderStatuses', 'OrderStatusController');
+Route::resource('orderStatuses', 'OrderStatusController')->middleware('auth');
 
-Route::resource('deliveries', 'DeliveryController');
+Route::resource('deliveries', 'DeliveryController')->middleware('auth');
 
-Route::resource('banners', 'BannerController');
+Route::resource('banners', 'BannerController')->middleware('auth');
 
-Route::resource('customers', 'CustomerController');
+Route::resource('customers', 'CustomerController')->middleware('auth');
 
-Route::resource('orders', 'OrderController');
-
-
-
-// router front end
-
-
-//trang chu
-
-
-
-//Route::get('/trang-chu', 'HomeController@getIndex');
-
-// Route::get('/', function () {
-//     return view('clothshop.index');
-// });
-
-//Route::get('/loai-sp', function () {
-//    return view('clothshop.categories');  //giao diện không thôi thì làm như 3 cái này
-//});
-
-// Route::get('/sanpham', function () {
-//     return view('clothshop.products');
-// });
-
-//Route::get('/dangnhap', function () {
-//    return view('clothshop.login');
-//});
-
-
-
-// Route::get('/chitietsp', function () {
-//     return view('clothshop.singleproduct');
-// });
-
-//Route::get('/giohang', function () {
-//    return view('clothshop.shopcart');
-//});
+Route::resource('orders', 'OrderController')->middleware('auth');
 
 Route::get('/diachigiaohang', function () {
     return view('clothshop.shipaddress');
@@ -127,6 +90,9 @@ Route::get('/trangquanly', function () {
     return view('layouts.app');
 });
 
+Route::get('/finish', function () {
+    return view('clothshop.finish');
+})->name('finish');
 
 Route::get('/', 'PageController@getIndex')->name('trangchu');
 

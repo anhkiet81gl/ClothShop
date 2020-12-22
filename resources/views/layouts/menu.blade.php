@@ -1,5 +1,5 @@
 @if(Auth::user()->role_id >= 0)
-<li class="active">
+<li class="">
     <a href="{!! route('dashboard') !!}"><i class="fa fa-user"></i><span>Dashboard</span></a>
 </li>
 

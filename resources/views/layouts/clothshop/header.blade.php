@@ -28,10 +28,12 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <!-- The user image in the menu -->
-                                    
+
                                     <!-- Menu Footer-->
                                     <li class="user-footer">
-                                        
+                                        <div class="">
+                                            <a href="{{ url('/home') }}" class="btn  btn-flat">Trang quản lý</a>
+                                        </div>
                                         <div class="">
                                             <a href="#" class="btn  btn-flat">Thông tin</a>
                                         </div>
@@ -60,12 +62,10 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <!-- The user image in the menu -->
-                                    
+
                                     <!-- Menu Footer-->
                                     <li class="user-footer">
-                                        <div class="">
-                                            <a href="" class="btn  btn-flat">Trang quản lý</a>
-                                        </div>
+
                                         <div class="">
                                             <a href="#" class="btn  btn-flat">Thông tin</a>
                                         </div>
@@ -122,11 +122,12 @@
                         </g>
                     </svg>
                     Giỏ hàng
+                    @if(Session::get('cart'))
                     <div class="cart-dropdown">
                         <table>
-                            @if(Session::get('cart'))
+
                                 @if(Session::get('cart'))
-                                    {{Session('cart')->totalQty}}
+{{--                                    {{Session('cart')->totalQty}}--}}
                                 @else
                                     Trống
                                 @endif
@@ -139,7 +140,7 @@
                                         <td><a title="close" href="{{route('dellProductCart',$product['item']['id'])}}"><i class="fa fa-close">    </i></a></td>
                                     </tr>
                                 @endforeach
-                            @endif
+
                         </table>
                         <div class="sub-total">
 
@@ -150,6 +151,7 @@
                             <a title="Checkout" href=" {{route('checkout')}}">Thanh toán</a>
                         </div>
                     </div>
+                    @endif
                 </div>
             </div>
         </div><!-- container /- -->

@@ -19,7 +19,7 @@
 				@foreach ($banner as $banner)
 				<div class="item">
 				<img src="{{$banner->link}}" alt="slide-{{$banner->id}}">
-					
+
 				</div>
 				@endforeach
 
@@ -66,7 +66,7 @@
 					<div class="item">
 						<div class="category-box">
 							<span class="sale">Mới</span>
-							<a title="Mens" href="02_categories.html">
+							<a title="Mens" href="{{route('productDetail',$product->id)}}">
 								<img src="{{$product->product_image }}" alt="cat-img" />
 								<span>{{$product->product_name }}</span>
 								<div class="cat-hover"></div>
@@ -98,7 +98,7 @@
 							<div class="product-box-inner">
 								<ul>
 									<li><a title="Eye" href="{{$products->product_image }}"><i class="fa fa-eye"></i></a></li>
-									
+
 								</ul>
 								<a title="Add to cart" href="{{route('addToCart',$products->id)}}" class="btn">Thêm vào giỏ</a>
 							</div>
@@ -149,9 +149,9 @@
 					<img src="{{URL::asset('img/hang/hang4.png')}}" alt="partner-1"/>
 					</a>
 				</div>
-				
+
 			</div><!-- Owl Carousel /- -->
         </div><!-- container /- -->
     </div><!-- Our Partner /- -->
-	
+
 </x-master>

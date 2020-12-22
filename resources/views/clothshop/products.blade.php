@@ -60,7 +60,7 @@
 		<div class="col-md-2 ">
 			<div >
 				<ul style="list-style-type:none" class="list-group">
-				<li class="text-center list-group-item "><h3>Hãng</h3></li>
+				<li class="text-center list-group-item "><h3>Loại sản phẩm</h3></li>
 				@foreach($categories as $categoriesp)
 				<li class="text-center text-dark "><a class="list-group-item-action list-group-item" style="color: gray" href="{{route('productCategories',$categoriesp->id)}}">{{$categoriesp->category_name}}</a></li>
 
