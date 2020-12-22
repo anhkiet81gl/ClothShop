@@ -9,7 +9,7 @@
 				<li class="active">Địa chỉ giao hàng</li> --}}
 			</ol>
 			<div class="return-home-link pull-right">
-				<a title="Return Home page" href="index.html">Trở lại trang chủ</a>
+				{{-- <a title="Return Home page" href="index.html">Trở lại trang chủ</a> --}}
 			</div>
 		</div>
 
@@ -22,13 +22,7 @@
 	<div class="page-wizard">
 		<!-- container -->
 		<div class="container">
-			{{-- <ul class="bottom-shadow">
-				<li class="active"><a title="login" href="07_login_register.html">1# login</a></li>
-				<li class="active"><a title="Shipping Address" href="08_Shipping_Address.html">2# Shipping Address</a></li>
-				<li><a title="Payments" href="09_payment.html">3# Payments</a></li>
-				<li><a title="summary" href="10_summary.html">4# summary</a></li>
-				<li><a title="Finish" href="11_finish.html">5# Finish</a></li>
-			</ul> --}}
+			
 			<!-- contact-form-details -->
 			<div class=" shipping-transports row">
 				<div class="col-md-12 col-sm-12 ">
@@ -97,9 +91,7 @@
                             <tr>
                                 <th class="product-name">Sản phẩm</th>
                                 <th class="product-description">Thông tin</th>
-                                {{-- <th class="product-brand">Hãng</th>
-                                <th class="product-color">Màu sắc</th>
-                                <th class="product-size">Kích thích</th> --}}
+                                
                                 <th class="blank-space"></th>
                                 <th class="product-quantity">Số lượng</th>
                                 <th class="product-price">Giá</th>
@@ -124,21 +116,9 @@
                                                 {{$product['item']['description']}}
                                             </a>
                                         </td>
-                                        {{-- <td data-title="brand" class="product-brand">
-                                            <span><img src="images/summary/gucci-icon.png" alt="gucci-icon" /></span>
-                                        </td>
-                                        <td data-title="Color" class="product-color">
-                                            <span class="choose-color color1"></span>
-                                        </td>
-                                        <td data-title="Size" class="product-size">
-                                            <span class="choose-size">xs</span>
-                                        </td> --}}
+                                        
                                         <td class="blank-space"></td>
-                                        {{-- <td data-title="Quantity" class="product-quantity">
-                                            <div class="quantity">
-                                                1
-                                            </div>
-                                        </td> --}}
+                                        
                                         <td data-title="Price" class="product-price">
                                             <span class="amount">{{$product['item']['product-price']}}</span>
                                         </td>

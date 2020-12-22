@@ -123,6 +123,9 @@ Route::get('/taotaikhoan', function () {
     return view('auth.register');
 });
 
+Route::get('/trangquanly', function () {
+    return view('layouts.app');
+});
 
 
 Route::get('/', 'PageController@getIndex')->name('trangchu');
